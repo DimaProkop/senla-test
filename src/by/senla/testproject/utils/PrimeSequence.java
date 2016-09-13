@@ -1,25 +1,20 @@
-package by.senla;
+package by.senla.testproject.utils;
 
 import java.util.ArrayList;
 
 /**
  * Created by dionp on 13.09.2016.
  */
-public class Prime {
+public class PrimeSequence {
 
     private static final int LIMIT = 1000;
-    private static ArrayList<Integer> arrayPrime;
-
-    public static ArrayList<Integer> getArrayPrime() {
-        return arrayPrime;
-    }
-
-    public Prime() {
+    private ArrayList<Integer> arrayPrime;
+    public PrimeSequence() {
         arrayPrime = new ArrayList<>();
         findPrimeNumbers(LIMIT);
     }
 
-    public static void findPrimeNumbers(int n) {
+    private void findPrimeNumbers(int n) {
         for (int i = 2; i < n; i++) {
             boolean isPrime = true;
             for (int j = 2; j < i; j++) {
@@ -33,4 +28,11 @@ public class Prime {
             }
         }
     }
+
+
+
+    public ArrayList<Integer> getArrayPrime() {
+        return arrayPrime;
+    }
+
 }
